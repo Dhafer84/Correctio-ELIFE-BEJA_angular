@@ -1,0 +1,40 @@
+{
+  "stages": [
+    {
+      "ref": "axx45",
+      "titre": "Stage PFE",
+      "description": "Elaboration d'un bilan",
+      "entreprise": "ACTIA",
+      "disponible": "OUI",
+      "nbrIntersse": 1,
+      "id": 2
+    },
+    {
+      "ref": "AS14",
+      "titre": "PFE",
+      "description": "Elaboration plan de test",
+      "entreprise": "ACTIA",
+      "disponible": "YES",
+      "nbrIntersse": 5,
+      "id": 3
+    },
+    {
+      "ref": 18,
+      "titre": "PFE Info",
+      "description": "System alarme",
+      "entreprise": "ACTIA",
+      "disponible": "1",
+      "nbrIntersse": 2,
+      "id": 4
+    },
+    {
+      "ref": 12,
+      "titre": "Ingénieur Devops",
+      "description": "De",
+      "entreprise": "ACTIA",
+      "disponible": true,
+      "nbrIntersse": 5,
+      "id": 5
+    }
+  ]
+}

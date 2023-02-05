@@ -1,0 +1,36 @@
+<h1>{{title}}</h1>
+
+<div class="form-group">
+  <input type="text" #myInput [(ngModel)]="keyword" (input)="onSearch()">
+
+  </div>
+
+<div *ngFor="let stage of list" >
+<table class="table">
+  <thead>
+<tr>
+  <th>Réfèrence</th>
+  <th>Titre</th>
+  <th>Description</th>
+  <th>Entreprise</th>
+  <th>Disponibilité</th>
+  <th>Nombre</th>
+  <th>Action</th>
+
+</tr>
+</thead>
+
+<tbody>
+  <tr>
+    <td>{{stage.ref}}</td>
+    <td>{{stage.titre}}</td>
+    <td>{{stage.description}}</td>
+    <td>{{stage.entreprise}}</td>
+    <td>{{stage.disponible}}</td>
+    <td>{{stage.nbrIntersse}}</td>
+    <td>
+      <button class="btn btn-sm btn-warning btndel" (click)="deleteStage(stage)">Delete </button>
+      <button class="btn btn-sm btn-success btndel" (click)="incrementInterest(stage)">Intéressé</button>
+    </td>
+
+  </tr>

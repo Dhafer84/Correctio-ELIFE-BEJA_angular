@@ -1,0 +1,53 @@
+<!-- app.component.html -->
+<h1>Formulaire d'ajout de stage</h1>
+<form #f="ngForm">
+
+  <div class="form-group">
+    <label for="ref">Référence :</label>
+    <input type="number" id="ref" name="ref" [(ngModel)]="stage.ref" class="form-control.col-md-1" required >
+  </div>
+
+  <div class="form-group">
+    <br>
+    <label for="titre">Titre : </label>
+    <input type="text" name="titre" [(ngModel)]="stage.titre" class="form-control.col-md-2" required>
+  </div>
+
+  <div class="form-group">
+    <br>
+    <label for="description">Description :</label>
+    <textarea name="description" [(ngModel)]="stage.description" class="form-control.col-md-2" required minlength="3" #pn="ngModel"></textarea>
+  </div>
+
+  <div class="alert alert-danger col-md-4" *ngIf="pn.invalid && pn.touched">
+    <div *ngIf="pn.hasError('required')">This Field is required</div>
+    <div  *ngIf="pn.hasError('minlength')">
+      minlength >= 3!
+    </div>
+    <div  *ngIf="pn.hasError('pattern')">
+      error pattern
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <br>
+    <label for="entreprise">Entreprise :</label>
+    <input type="text" name="entreprise" [(ngModel)]="stage.entreprise" class="form-control.col-md-2" required>
+  </div>
+
+  <div class="form-group">
+    <br>
+    <label for="disponible">Disponibilité :</label>
+    <input type="checkbox" name="disponible" [(ngModel)]="stage.disponible" class="form-control.col-md-2" required>
+  </div>
+
+  <div class="form-group">
+    <br>
+    <label for="nbrInteresse">nombre :</label>
+    <input type="number" name="nbrInteresse" [(ngModel)]="stage.nbrIntersse" class="form-control.col-md-2" required>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-success" (click)="saveStage()">{{action}}</button>
+  </div>
+</form>
